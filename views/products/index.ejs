@@ -1,0 +1,9 @@
+<a href="/products/new">Nuevo producto</a>
+
+<ul>
+  <% products.forEach(product => { %>
+    <li>
+      <a href="/products/<%= product._id %>"><%= product.name %></a>
+    </li>
+  <% }) %>
+</ul>

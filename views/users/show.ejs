@@ -1,0 +1,11 @@
+<h2><%= user.name %></h2>
+<p><%= user.email %></p>
+
+<a href="/users/<%= user._id %>/edit">Editar</a>
+
+<form action="/users/<%= user._id %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <button type="submit">Eliminar</button>
+</form>
+
+<a href="/users">Volver al listado de usuarios</a>
