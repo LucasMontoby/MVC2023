@@ -16,29 +16,17 @@ app.use(express.static('public'));
 
 // Controladores
 const homeController = require('./controllers/homeController');
-const productController = require('./controllers/productController');
-const userController = require('./controllers/userController');
+const productRoutes = require("./routes/products")
+const userRoutes = require("./routes/users")
+
+app.use('/', productRoutes);
+app.use('/', userRoutes);
 
 // Rutas
 app.get('/', homeController.index);
-
-app.get('/products', productController.index);
-app.get('/products/new', productController.new);
-app.post('/products', productController.create);
-app.get('/products/:id', productController.show);
-app.get('/products/:id/edit', productController.edit);
-app.post('/products/:id', productController.update);
-app.post('/products/:id/delete', productController.delete);
-
-app.get('/users', userController.index);
-app.get('/users/new', userController.new);
-app.post('/users', userController.create);
-app.get('/users/:id', userController.show);
-app.get('/users/:id/edit', userController.edit);
-app.post('/users/:id', userController.update);
-app.post('/users/:id/delete', userController.delete);
 
 // Inicio del servidor
 app.listen(3000, () => {
   console.log('Servidor iniciado en el puerto 3000');
 });
+
