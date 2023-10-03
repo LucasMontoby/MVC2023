@@ -1,0 +1,9 @@
+<!-- createProductForUser.ejs -->
+<h1>Crear Producto para un Usuario</h1>
+<form action="/users/<%= userId %>/products" method="POST">
+  <!-- Campos para el nombre, descripción y precio del producto -->
+  <input type="text" name="name" placeholder="Nombre del Producto" required>
+  <input type="text" name="description" placeholder="Descripción del Producto" required>
+  <input type="number" name="price" placeholder="Precio" required>
+  <button type="submit">Crear Producto</button>
+</form>

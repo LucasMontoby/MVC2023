@@ -1,0 +1,7 @@
+<!-- getUsersByProduct.ejs -->
+<h1>Usuarios del Producto <%= productName %></h1>
+<ul>
+  <% users.forEach(function(user) { %>
+    <li><%= user.name %></li>
+  <% }); %>
+</ul>
