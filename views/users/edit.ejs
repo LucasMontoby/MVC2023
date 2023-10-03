@@ -1,0 +1,11 @@
+<form action="/users/:id" method="post">
+    <input type="hidden" name="_method" value="PUT">
+    
+    <label for="name">Nombre:</label>
+    <input type="text" id="name" name="user[name]" required>
+  
+    <label for="email">Correo Electrónico:</label>
+    <input type="email" id="email" name="user[email]" required>
+  
+    <button type="submit">Actualizar usuario</button>
+</form>

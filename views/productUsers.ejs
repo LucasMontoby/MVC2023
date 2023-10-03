@@ -1,0 +1,17 @@
+<!-- views/productUsers.ejs -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Usuarios relacionados con el producto</title>
+</head>
+<body>
+  <h1>Usuarios relacionados con el producto <%= product.name %></h1>
+  
+  <ul>
+    <% users.forEach(function(user) { %>
+      <li><%= user.name %> (Email: <%= user.email %>)</li>
+    <% }); %>
+  </ul>
+</body>
+</html>
+

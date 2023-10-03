@@ -18,9 +18,11 @@ app.use(express.static('public'));
 const homeController = require('./controllers/homeController');
 const productRoutes = require("./routes/products")
 const userRoutes = require("./routes/users")
+const relationshipRoutes = require("./routes/relationshipRoutes")
 
 app.use('/', productRoutes);
 app.use('/', userRoutes);
+app.use('/', relationshipRoutes)
 
 // Rutas
 app.get('/', homeController.index);
